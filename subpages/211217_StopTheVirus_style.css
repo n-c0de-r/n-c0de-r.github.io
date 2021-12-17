@@ -99,8 +99,7 @@ textarea {
 	}
 button, input {
 	width: 25vw;
-	height: 5vw;
+	height: 10vw;
 	font-size: 2rem;
 	background-color: var(--zelda-yellow);
 	}
-}
