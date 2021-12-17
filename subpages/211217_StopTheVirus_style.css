@@ -1,26 +1,18 @@
-@keyframes like-gif {
-	0% {
-		background-position: 0%;
-	}
-	100% {
-		background-position: 100%;
-	}
+:root {
+  --menu-width: 200px;
+  --menu-height: 30px;
+  --zelda-white: #F9E9B6;
+  --zelda-yellow: #FFFC54;
+  --zelda-black: #31312D;
+  --zelda-lightgreen: #1A9114;
+  --zelda-darkgreen: #396F10;
 }
 
-@media only screen and (min-width:500px){
+@media only screen and (min-width: 500px){
 	textarea {
-	width:50vw;
+		width:50vw;
 	}
-
-  :root {
-	--menu-width: 200px;
-	--menu-height: 30px;
-	--zelda-white: #F9E9B6;
-	--zelda-yellow: #FFFC54;
-	--zelda-black: #31312D;
-	--zelda-lightgreen: #1A9114;
-	--zelda-darkgreen: #396F10;
-  }
+}
   
   body {
 	  background-image: radial-gradient(farthest-corner at 150% 150%, var(--zelda-yellow), #31312dFF, #31312dFF);
@@ -99,8 +91,8 @@
   }
 
 textarea {
-	width:90vw;
-	background-color: var(--zelda-white);
+	width:50vw;
+	background-color: var(--zelda-lightgreen);
 	height: 80vh;
 	resize: none;
 	font-size: 2rem;
@@ -109,6 +101,6 @@ button, input {
 	width: 25vw;
 	height: 5vw;
 	font-size: 2rem;
-	background-color: var(--zelda-white);
+	background-color: var(--zelda-yellow);
 	}
 }
