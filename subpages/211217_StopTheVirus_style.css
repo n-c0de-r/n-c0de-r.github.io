@@ -1,105 +1,29 @@
-:root {
-  --menu-width: 200px;
-  --menu-height: 30px;
-  --zelda-white: #F9E9B6;
-  --zelda-yellow: #FFFC54;
-  --zelda-black: #31312D;
-  --zelda-lightgreen: #1A9114;
-  --zelda-darkgreen: #396F10;
-}
+@import "../style.css";
 
-@media only screen and (min-width: 500px){
+@media only screen and (max-width: 300px){
 	textarea {
-		width:50vw;
+		width:45vw;
+	}
+	button, input {
+		width: 20vw;
 	}
 }
-  
-  body {
-	  background-image: radial-gradient(farthest-corner at 150% 150%, var(--zelda-yellow), #31312dFF, #31312dFF);
-	  color: var(--zelda-yellow);
-	  min-height: 100vh;
-	  font-family: Verdana, Geneva, Tahoma, sans-serif;
-	  padding-left: calc(var(--menu-width)*0.2);
-  }
-  
-  h1 {
-	  text-align: center;
-  }
-  
-  .like {
-	  display: flex;
-	  width: 110px; 
-	  height: 110px;
-	  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/349115/like_animation.png) 0 0 no-repeat;
-	  background-size: 3000%;
-	  animation-play-state: paused;
-  }
-  
-  .like:hover {
-	animation: like-gif steps(28) 1s running both;
-	  
-  }
-  
-  a:visited {
-	  color: var(--zelda-lightgreen);
-  }
-  
-  a:hover {
-	  font-weight: bolder;
-  }
-  
-  .testArea {
-	width: 100%;
-  }
-  
-  .collapsableNavbar a{
-	position: absolute;
-	text-align: center;
-	margin: 0;
-	padding: 10px;
-	transition: 0.4s;
-	width: var(--menu-width);
-	left: calc(var(--menu-width) * -0.9);
-	border-radius: 0 5px 5px 0;
-	background-color: var(--zelda-darkgreen) ;
-  }
-  
-  .collapsableNavbar a:hover {
-	left: 0px;
-	color: var(--zelda-black);
-	background-color: var(--zelda-yellow);
-  }
-  
-  #home {
-	top: calc(var(--menu-height)/2);
-  }
-  
-  #audio {
-	top: calc(var(--menu-height) + var(--menu-height)/2);
-  }
-  
-  #zelda {
-	top: calc(var(--menu-height) * 2 + var(--menu-height)/2);
-  }
-  
-  #ttt {
-	top: calc(var(--menu-height) * 3 + var(--menu-height)/2);
-  }
-  
-  #virus {
-	top: calc(var(--menu-height) * 4 + var(--menu-height)/2);
-  }
+
+body {
+	overflow: hidden;
+}
 
 textarea {
-	width:50vw;
-	background-color: var(--zelda-lightgreen);
-	height: 80vh;
+	width:90vw;
+	background-color: var(--zelda-white);
+	height: 70vh;
 	resize: none;
 	font-size: 2rem;
-	}
+}
+
 button, input {
-	width: 25vw;
-	height: 10vw;
+	width: 45vw;
+	height: 7vw;
 	font-size: 2rem;
 	background-color: var(--zelda-yellow);
-	}
+}

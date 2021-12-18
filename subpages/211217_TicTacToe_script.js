@@ -1,9 +1,7 @@
   var playerAturn = null;
-  var displayText = document.getElementsByTagName("h2")[1];
+  var displayText = document.getElementsByTagName("h2")[0];
   var allFields = document.getElementsByTagName("td");
   var turns = allFields.length;
-  var xSrc = "../assets/x.png";
-  var oSrc = "../assets/o.png";
   
   function start () {
     document.getElementsByTagName("button")[0].setAttribute("disabled", true);
@@ -26,8 +24,8 @@
   }
   
   function setSymbol(){
-  	if (playerAturn) {this.innerHTML = '<img src=xSrc width="64px" height="64px" alt="X">';
-    } else {this.innerHTML = '<img src=oSrc width="64px" height="64px" alt="O">';}
+  	if (playerAturn) {this.innerHTML = '<img src="../assets/x.png" width="64px" height="64px" alt="X">';
+    } else {this.innerHTML = '<img src="../assets/o.png" width="64px" height="64px" alt="O">';}
     this.removeEventListener("click", setSymbol);
    turns -= 1;
    checkWin();

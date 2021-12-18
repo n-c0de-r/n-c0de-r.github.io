@@ -1,104 +1,31 @@
-@keyframes like-gif {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 100%;
-  }
-}
+@import "../style.css";
 
 :root {
-  --menu-width: 200px;
-  --menu-height: 30px;
-  --zelda-white: #F9E9B6;
-  --zelda-yellow: #FFFC54;
-  --zelda-black: #31312D;
-  --zelda-lightgreen: #1A9114;
-  --zelda-darkgreen: #396F10;
+  --board-height: 60vh;
 }
 
 body {
-    background-image: radial-gradient(farthest-corner at 150% 150%, var(--zelda-yellow), #31312dFF, #31312dFF);
-    color: var(--zelda-yellow);
-    min-height: 100vh;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-left: calc(var(--menu-width)*0.2);
+	overflow: hidden;
 }
 
-h1 {
-    text-align: center;
-}
-
-a:visited {
-    color: var(--zelda-lightgreen);
-}
-
-a:hover {
-    font-weight: bolder;
-}
-
-.testArea {
-  width: 100%;
-}
-
-.collapsableNavbar a{
-  position: absolute;
-  text-align: center;
-  margin: 0;
-  padding: 10px;
-  transition: 0.4s;
-  width: var(--menu-width);
-  left: calc(var(--menu-width) * -0.9);
-  border-radius: 0 5px 5px 0;
-  background-color: var(--zelda-darkgreen) ;
-}
-
-.collapsableNavbar a:hover {
-  left: 0px;
-  color: var(--zelda-black);
-  background-color: var(--zelda-yellow);
-}
-
-#home {
-  top: calc(var(--menu-height)/2);
-}
-
-#audio {
-  top: calc(var(--menu-height) + var(--menu-height)/2);
-}
-
-#zelda {
-  top: calc(var(--menu-height) * 2 + var(--menu-height)/2);
-}
-
-#ttt {
-  top: calc(var(--menu-height) * 3 + var(--menu-height)/2);
-}
-
-#virus {
-  top: calc(var(--menu-height) * 4 + var(--menu-height)/2);
+table, tr, td {
+  border: 1px solid black;
 }
 
 td {
-    border: 1px solid black;
-    width:100px;
-    height:100px;
+    width:calc(var(--board-height)/3);
+    height:calc(var(--board-height)/3);
     z-index:0;
   }
   td img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-        z-index:10;
+    z-index:10;
 }
-  tr { 
-    width: 300px;
-    height: 100px;
-    border: 1px solid black; 
-  }
  
   table{
-    width: 300px;
-    border: 1px solid black;
+    width: var(--board-height);
+    height: var(--board-height);
     border-collapse: collapse;
   }
