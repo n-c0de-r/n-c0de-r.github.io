@@ -1,5 +1,9 @@
 @import "../style.css";
 
+body {
+	padding-right: calc(var(--menu-width)*0.25);
+	padding-left: calc(var(--menu-width)*0.25);
+}
 
 .search {
   display: flex;

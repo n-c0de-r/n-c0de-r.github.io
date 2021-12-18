@@ -8,8 +8,8 @@
 }
 
 :root {
-  --menu-width: 200px;
-  --menu-height: 30px;
+  --menu-width: 20%;
+  --menu-height: 5%;
   --zelda-white: #F9E9B6;
   --zelda-yellow: #FFFC54;
   --zelda-black: #31312D;
@@ -18,11 +18,12 @@
 }
 
 body {
+    padding-right: calc(var(--menu-width)*0.25);
+    padding-left: calc(var(--menu-width)*0.25);
     background-image: radial-gradient(farthest-corner at 150% 150%, var(--zelda-yellow), #31312dFF, #31312dFF);
     color: var(--zelda-yellow);
     min-height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-left: calc(var(--menu-width)*0.2);
 }
 
 h1 {
@@ -58,17 +59,26 @@ a:hover {
 .collapsableNavbar a{
   position: absolute;
   text-align: center;
-  margin: 0;
-  padding: 10px;
+  text-decoration: none;
+  margin:0;
+  padding-left: 2%;
+  padding-top: 1%;
+  padding-right: 5%;
+  padding-bottom: 1%;
   transition: 0.4s;
   width: var(--menu-width);
-  left: calc(var(--menu-width) * -0.9);
+  height: var(--menu-height);
+  left: calc(var(--menu-width) * -1.1);
   border-radius: 0 5px 5px 0;
   background-color: var(--zelda-darkgreen) ;
 }
 
 .collapsableNavbar a:hover {
-  left: 0px;
+  left: 0%;
+  min-width: 150px;
+  z-index: 10;
+  padding-left: 1%;
+  padding-right: 1%;
   color: var(--zelda-black);
   background-color: var(--zelda-yellow);
 }
