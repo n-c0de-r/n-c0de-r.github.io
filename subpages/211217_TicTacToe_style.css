@@ -10,12 +10,27 @@ body {
 	overflow: hidden;
 }
 
-button {
-  font-size: 2rem;
+.play-area {
+  padding: 20px;
+  float: left;
+  font-size: 1rem;
+}
+
+h2, button {
+  font-size: 2em;
+}
+
+table {
+  display: flexbox;
 }
 
 table, tr, td {
   border: 3px solid black;
+}
+
+.rules {
+  font-size: 2rem;
+  padding: 20px;
 }
 
 td {
