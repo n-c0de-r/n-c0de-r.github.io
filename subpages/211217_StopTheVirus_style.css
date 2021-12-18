@@ -1,29 +1,40 @@
 @import "../style.css";
 
-@media only screen and (max-width: 300px){
-	textarea {
-		width:45vw;
-	}
-	button, input {
-		width: 20vw;
-	}
-}
-
 body {
 	overflow: hidden;
 }
 
 textarea {
-	width:90vw;
+	width: 90vw;
 	background-color: var(--zelda-white);
 	height: 70vh;
 	resize: none;
 	font-size: 2rem;
+	overflow: hidden;
 }
 
 button, input {
-	width: 45vw;
+	width: 40vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
 	height: 7vw;
 	font-size: 2rem;
+}
+
+button {
+	background-color: var(--zelda-yellow);
+}
+
+button.active {
+	background-color: transparent;
+}
+
+input {
+	color: var(--zelda-yellow);
+	background-color: var(--zelda-black);
+}
+
+input.active {
+	color: var(--zelda-black);
 	background-color: var(--zelda-yellow);
 }

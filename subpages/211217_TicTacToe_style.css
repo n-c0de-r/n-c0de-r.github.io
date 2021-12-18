@@ -2,25 +2,33 @@
 
 :root {
   --board-height: 60vh;
+  --item-height: calc(var(--board-height)/3);
+  font-size: 1rem;
 }
 
 body {
 	overflow: hidden;
 }
 
+button {
+  font-size: 2rem;
+}
+
 table, tr, td {
-  border: 1px solid black;
+  border: 3px solid black;
 }
 
 td {
-    width:calc(var(--board-height)/3);
-    height:calc(var(--board-height)/3);
+    width: var(--item-height);
+    height: var(--item-height);
     z-index:0;
   }
   td img{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: calc(var(--item-height)* 0.7);
+    height: calc(var(--item-height)* 0.7);
     z-index:10;
 }
  
