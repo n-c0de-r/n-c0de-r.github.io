@@ -2,28 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="../script.js" defer></script>
     <script src="211217_API_script.js" defer></script>
     <link rel="stylesheet" href="211217_API_style.css">
     <title>Audio API Project</title>
 </head>
-<body>
+<body onload="fillNavbar()">
     <nav class="collapsableNavbar" id="collapsableNavbar">
-        <a href="../index.html" id="home">Home</a>
-        <a href="../subpages/211217_API_project.html" id="audio">Audio API</a>
-        <a href="#" id="zelda">Zelda API</a>
-        <a href="../subpages/211217_TicTacToe_project.html" id="ttt">Tic Tac Toe</a>
-        <a href="../subpages/211217_StopTheVirus_project.html" id="virus">Stop The Virus</a>
     </nav>
     <a href="https://www.theaudiodb.com">
         <img src="../assets/211217_AudioDG_image.png" class="image-AudioDB" id="image-AudioDB">
     </a>
-    <div class="testArea" id="results">
+    <div class="searchDiv" id="searchDiv">
         <input class="search input" id="search-input" placeholder="&#x1F50D Search" />
         <button class="search button" id="search-button" onclick="search()">Find</button>
     </div>
-    <div class="results" id="results">
-        <h1 id="field-artist"></h1>
-        <article id="field-description"></article>
+    <div class="resultDiv" id="resultDiv">
     </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 body {
 	overflow: hidden;
-	padding-right: calc(var(--menu-width)*0.2);
+	padding-right: calc(var(--menu-width)*0.25);
 	padding-left: calc(var(--menu-width)*0.25);
 }
 
@@ -16,7 +16,8 @@ textarea {
 }
 
 button, input {
-	position: static;
+	display: inline-block;
+	position: relative;
 	width: 45%;
 	min-width: 20%;
 	min-height: 20%;
