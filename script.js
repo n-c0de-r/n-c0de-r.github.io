@@ -6,4 +6,6 @@ function fillNavbar(){
     + "<a href=\"#\" id=\"zelda\">Zelda API</a>\n"
     + "<a href=\"../subpages/211217_TicTacToe_project.html\" id=\"ttt\">Tic Tac Toe</a>\n"
     + "<a href=\"../subpages/211217_StopTheVirus_project.html\" id=\"virus\">Stop The Virus</a>\n";
+    let head =document.getElementsByTagName("head")[0];
+    head.innerHTML += "<link rel=\"icon\" type=\"image/png\" href=\"../assets/favicon.png\" sizes=\"400x400\"></link>";
 }
