@@ -1,0 +1,208 @@
+:root {
+    --animationDuration: 1s;
+    --scanlineHeight: 8px;
+    --scanlineOpacity: 0.1;
+    --textColor1: #001eff80;
+    --textColor2: #ff00504d;
+    --backColor: #003200bf;
+    --textOffset: 300;
+}
+
+html {
+    
+    color: #ffC8C8;
+    font-family: Courier, monospace;
+    font-size: 24px;
+    overflow: hidden;
+}
+
+.cursorBlink {
+    opacity: 0%;
+    animation: cursorBlink var(--animationDuration) forwards;
+    animation-delay: calc(var(--order) * var(--animationDuration));
+}
+
+.crt::before {
+    animation: screenFlicker 0.2s infinite;
+    background: linear-gradient(rgba(18, 18, 16, 0.2) 50%, rgba(0, 0, 0, 0.25) 50%);
+    background-size: 100% var(--scanlineHeight), var(--scanlineHeight) 100%;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.crt {
+    /* based on https://css-tricks.com/old-timey-terminal-styling */
+    background: black;
+    background-image: radial-gradient(var(--backColor), black 100%);
+    display: inline-block;
+    height: 100vh;
+}
+
+.intro {
+    margin: 0 auto;
+    cursor: none;
+    animation: var(--animationDuration) intro forwards;
+    animation-delay: calc(var(--order) * calc(var(--animationDuration)));
+}
+
+.typed {
+    opacity: 0%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    animation: typing var(--animationDuration) steps(var(--chars)) forwards;
+    animation-delay: calc(var(--order) * var(--animationDuration));
+}
+
+/* Keyframes */
+@keyframes cursorBlink {
+    
+    20%,
+    60%,
+    100% {
+        opacity: 0%;
+    }
+
+    0%,
+    40%,
+    80% {
+        opacity: 100%;
+    }
+}
+
+@keyframes intro {
+
+    0%,
+    99.99% {
+        scale: 1;
+        display: block;
+    }
+
+    100% {
+        scale: 0;
+        display: none;
+    }
+}
+
+/*based on http://aleclownes.com/2017/02/01/crt-display.html*/
+@keyframes screenFlicker {
+    0% {
+        opacity: calc(var(--scanlineOpacity) * 7)
+    }
+
+    10% {
+        opacity: calc(var(--scanlineOpacity) * 5)
+    }
+
+    20% {
+        opacity: calc(var(--scanlineOpacity) * 2)
+    }
+
+    30% {
+        opacity: calc(var(--scanlineOpacity) * 8)
+    }
+
+    40% {
+        opacity: calc(var(--scanlineOpacity) * 1)
+    }
+
+    50% {
+        opacity: calc(var(--scanlineOpacity) * 12)
+    }
+
+    60% {
+        opacity: calc(var(--scanlineOpacity) * 4)
+    }
+
+    70% {
+        opacity: calc(var(--scanlineOpacity) * 10)
+    }
+
+    80% {
+        opacity: calc(var(--scanlineOpacity) * 6)
+    }
+
+    90% {
+        opacity: calc(var(--scanlineOpacity) * 9)
+    }
+
+    100% {
+        opacity: calc(var(--scanlineOpacity) * 7)
+    }
+}
+
+@keyframes textGlitch {
+    0% {
+        text-shadow: calc(var(--textOffset) * 8) 0 1px var(--textColor1), calc(var(--textOffset) * -15) 0 1px var(--textColor2), 0 0 3px;
+    }
+
+    10% {
+        text-shadow: calc(var(--textOffset) * 2) 0 1px var(--textColor1), calc(var(--textOffset) * -5) 0 1px var(--textColor2), 0 0 3px;
+    }
+
+    20% {
+        text-shadow: calc(var(--textOffset) * 16) 0 1px var(--textColor1), calc(var(--textOffset) * -19) 0 1px var(--textColor2), 0 0 3px;
+    }
+
+    30% {
+        text-shadow: calc(var(--textOffset) * 4) 0 1px var(--textColor1), calc(var(--textOffset) * -2) 0 1px var(--textColor2), 0 0 3px;
+    }
+
+    40% {
+        text-shadow: calc(var(--textOffset) * 24) 0 1px var(--textColor1), calc(var(--textOffset) * -21) 0 1px var(--textColor2), 0 0 3px;
+    }
+
+    50% {
+        text-shadow: calc(var(--textOffset) * 1) 0 1px var(--textColor1), calc(var(--textOffset) * -11) 0 1px var(--textColor2), 0 0 3px;
+    }
+
+    60% {
+        text-shadow: calc(var(--textOffset) * 18) 0 1px var(--textColor1), calc(var(--textOffset) * -1) 0 1px var(--textColor2), 0 0 3px;
+    }
+
+    70% {
+        text-shadow: calc(var(--textOffset) * 10) 0 1px var(--textColor1), calc(var(--textOffset) * -25) 0 1px var(--textColor2), 0 0 3px;
+    }
+
+    80% {
+        text-shadow: calc(var(--textOffset) * 20) 0 1px var(--textColor1), calc(var(--textOffset) * -7) 0 1px var(--textColor2), 0 0 3px;
+    }
+
+    90% {
+        text-shadow: calc(var(--textOffset) * 12) 0 1px var(--textColor1), calc(var(--textOffset) * -9) 0 1px var(--textColor2), 0 0 3px;
+    }
+
+    100% {
+        text-shadow: calc(var(--textOffset) * 8) 0 1px var(--textColor1), calc(var(--textOffset) * -13) 0 1px var(--textColor2), 0 0 3px;
+    }
+}
+
+@keyframes typing {
+
+    0%,
+    100% {
+        opacity: 100%;
+    }
+
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: calc((var(--chars) * 1ch));
+    }
+
+    0%,
+    99.99% {
+        border-right: 8px solid;
+    }
+
+    100% {
+        border-right: 0px solid;
+    }
+}
